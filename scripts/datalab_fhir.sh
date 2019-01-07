@@ -111,6 +111,7 @@ COPY ./bunsen-assembly-0.4.3 /usr/local/bunsen-assembly-0.4.3
 COPY ./fhir /usr/local/fhir
 USER root
 RUN ln -s /usr/local/bunsen-assembly-0.4.3 /usr/local/bunsen
+RUN pip install protobuf==3.6 apache-beam==2.7.0 apache-beam[gcp] psutil 
 
 # Workers do not run docker, so have a different python environment.
 # To run python3, you need to run the conda init action.
