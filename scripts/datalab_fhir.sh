@@ -111,8 +111,10 @@ COPY ./bunsen-assembly-0.4.3 /usr/local/bunsen-assembly-0.4.3
 COPY ./fhir /usr/local/fhir
 USER root
 RUN ln -s /usr/local/bunsen-assembly-0.4.3 /usr/local/bunsen
-RUN pip install protobuf==3.6 apache-beam==2.7.0 apache-beam[gcp] psutil 
-
+RUN conda install --yes --quiet --name py2env protobuf==3.6 psutil==5.4.8
+RUN source activate py2env && pip install apache-beam==2.7.0 apache-beam[gcp]
+RUN conda remove --yes --name py2env python-snappy
+#RUN conda install --yes --quiet --name py2env tensorflow==1.12
 # Workers do not run docker, so have a different python environment.
 # To run python3, you need to run the conda init action.
 # The conda init action correctly sets up python in PATH and
