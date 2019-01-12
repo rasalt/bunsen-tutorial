@@ -1,0 +1,1 @@
+gcloud compute --project=$PROJECT firewall-rules create allowsshall --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:22 --source-ranges=0.0.0.0/0 --target-tags=dataproc
