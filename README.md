@@ -1,7 +1,7 @@
 # HealtheDatalab 
 
-This repository contains 2 sets of resources for running healthedatalab.
-./notebooks: This contains juputer notebooks for various phases involved to take patient healthcare data, transform it and eventually train an ML model.
+This repository contains 2 sets of resources for running healthedatalab:
+./notebooks: This contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually train an ML model.
 ./scripts: This contains various scripts to provision an environment on Google Cloud Platform to setup a dataproc cluster connected to a persistent HIVE metastore.
    There are convenience scripts to open firewall rules and open an ssh tunnel over which one can access their jupyter notebooks.
 
