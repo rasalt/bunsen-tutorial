@@ -31,7 +31,8 @@ Then run the 02-cluster.sh file to create a new dataproc cluster
 ./02-cluster.sh
 ```
 
-Use the following helper scripts to access Cloud Datalab:  
+## Access Cloud Datalab over a secure SSH tunnel
+Use the following helper scripts to access Cloud Datalab from your local machine:  
 
 [firewall_ssh.sh](./scripts/provisioning/firewall_ssh.sh) script adds an ingress firewall rule required for establishing ssh tunnel between your local machine and Cloud Datalab running on GCP.  
 ```
@@ -46,8 +47,7 @@ Use the following helper scripts to access Cloud Datalab:
 [jupyterconnect.sh](./scripts/provisioning/jupyterconnect.sh) script opens a jupyter notebook inside a Chrome web browser on a MAC.  
 ```
 ./jupyterconnect.sh
-```
-[jupyterconnect.sh](./scripts/provisioning/jupyterconnect.sh) script opens a jupyter notebook inside a Chrome web browser on a MAC.  
+``` 
 This opens up the jupyter notebook in Chrome web browser on localhost:<port> . 
 
 Click on the URL displayed at the bottom of the screen and Jupyter will open in your web browser. From there, navigate to work/getting_started.ipynb. From there, just follow the instructions in that notebook!
