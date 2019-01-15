@@ -1,9 +1,12 @@
 # HealtheDatalab 
 
-This repository contains 2 sets of resources for running healthedatalab:
-./notebooks: This contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually train an ML model.
-./scripts: This contains various scripts to provision an environment on Google Cloud Platform to setup a dataproc cluster connected to a persistent HIVE metastore.
-   There are convenience scripts to open firewall rules and open an ssh tunnel over which one can access their jupyter notebooks.
+This repository contains 2 types of resources for running healthedatalab on Google Cloud Platform:  
+
+1. [notebooks](https://github.com/rasalt/hdl-demo/tree/master/notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
+
+2. [scripts](https://github.com/rasalt/hdl-demo/tree/master/scripts "Shell scripts") contains various scripts to provision an environment on Google Cloud Platform to setup a dataproc cluster connected to a persistent HIVE metastore.  
+
+We have provided scripts to add ingress firewall rules required to setup an ssh tunnel between your local machine and Cloud Datalab running on GCP. This will enable a chrome web browser to securely access Cloud datalab over SSH tunnel.  
 
 ## Provisiong a Dataproc cluster
 
