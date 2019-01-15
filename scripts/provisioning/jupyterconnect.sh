@@ -1,4 +1,6 @@
+export MASTERNODE=${clustername}"-m"
+export PORT=1082
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --proxy-server="socks5://localhost:${PORT}" \
   --user-data-dir=/tmp/${MASTERNODE} \
-  --incognito http://$MASTERNODE:8080 
+  --incognito http://$MASTERNODE:8080
