@@ -1,4 +1,4 @@
-# HealtheDatalab 
+# HealtheDatalab
 
 This repository contains 2 types of resources for running healthedatalab on Google Cloud Platform (GCP):  
 
@@ -11,22 +11,22 @@ We have provided scripts to add ingress firewall rules required to setup an ssh 
 ## Provision a Dataproc cluster on GCP
 
 First create your env.sh file based on the skeleton provided in [env.sh]( ./scripts/provisioning/env.sh) .  
-   
+
 Source the environment file you've created. Be aware that the bucketname needs to be unique. If that bucketname already exists then the script will partially fail on subsequent steps.
 
 ```bash
 eg. source ./myenv.sh
 ```
 
-Run the 01-prep.sh script to move the cluster initialization scripts to Google cloud storage bucket
-This script will also create a persistent hive metastore (CloudSQL instance) . 
+Run the [01-prep.sh](./scripts/provisioning/01-prep.sh) script to move the cluster initialization scripts to Google cloud storage bucket
+This script will also create a persistent hive metastore (CloudSQL instance) .
 
 ```
 cd {path}/hdl-demo/scripts/provisioning
 ./01-prep.sh
 ```
 
-Then run the 02-cluster.sh file to create a new dataproc cluster
+Then run the [02-cluster.sh](./scripts/provisioning/02-cluster.sh) file to create a new dataproc cluster
 ```
 ./02-cluster.sh
 ```
@@ -39,7 +39,7 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 ./firewall_ssh.sh
 ```
 
-[sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel. 
+[sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.
 ```
 ./sshtunnel.sh
 ```
@@ -47,8 +47,8 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 [jupyterconnect.sh](./scripts/provisioning/jupyterconnect.sh) script opens a jupyter notebook inside a Chrome web browser on a MAC.  
 ```
 ./jupyterconnect.sh
-``` 
-This opens up the jupyter notebook in Chrome web browser on localhost:<port> . 
+```
+This opens up the jupyter notebook in Chrome web browser on localhost:<port> .
 
 Click on the URL displayed at the bottom of the screen and Jupyter will open in your web browser. From there, navigate to work/getting_started.ipynb. From there, just follow the instructions in that notebook!
 
