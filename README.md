@@ -1,19 +1,19 @@
 # HealtheDatalab 
 
-This repository contains 2 types of resources for running healthedatalab on Google Cloud Platform:  
+This repository contains 2 types of resources for running healthedatalab on Google Cloud Platform (GCP):  
 
 1. [notebooks](https://github.com/rasalt/hdl-demo/tree/master/notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
 
-2. [scripts](https://github.com/rasalt/hdl-demo/tree/master/scripts "Shell scripts") contains various scripts to provision an environment on Google Cloud Platform to setup a dataproc cluster connected to a persistent HIVE metastore.  
+2. [scripts](https://github.com/rasalt/hdl-demo/tree/master/scripts "Shell scripts") contains various scripts to provision an environment on GCP to setup a dataproc cluster connected to a persistent HIVE metastore.  
 
 We have provided scripts to add ingress firewall rules required to setup an ssh tunnel between your local machine and Cloud Datalab running on GCP. This will enable a chrome web browser to securely access Cloud datalab over SSH tunnel.  
 
-## Provisiong a Dataproc cluster
+## Provision a Dataproc cluster on GCP
 
-Please create your env.sh file based on the skeleton provided in 
- ./scripts/provisioning/env.sh.
-Source the environment file you've created
-Be aware that the bucketname needs to be unique. If that bucketname already exists then the script will partially fail but subsequent steps will fail.
+First create your env.sh file based on the skeleton provided in [env.sh]( ./scripts/provisioning/env.sh) .  
+   
+Source the environment file you've created. Be aware that the bucketname needs to be unique. If that bucketname already exists then the script will partially fail on subsequent steps.
+
 ```bash
 eg. source ./myenv.sh
 ```
