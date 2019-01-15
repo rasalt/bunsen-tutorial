@@ -112,7 +112,7 @@ COPY ./fhir /usr/local/fhir
 USER root
 RUN ln -s /usr/local/bunsen-assembly-0.4.3 /usr/local/bunsen
 RUN conda install --yes --quiet --name py2env protobuf==3.6 psutil==5.4.8
-RUN source activate py2env && pip install apache-beam==2.7.0 apache-beam[gcp]
+RUN source activate py2env && pip install apache-beam==2.7.0 apache-beam[gcp] tensorflow==1.12
 RUN conda remove --yes --name py2env python-snappy
 #RUN conda install --yes --quiet --name py2env tensorflow==1.12
 # Workers do not run docker, so have a different python environment.
