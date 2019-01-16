@@ -3,4 +3,4 @@
 **/derby.log
 spark-warehouse
 metastore_db
-**/scripts/provisioning/env.sh
+**/scripts/provisioning/dp_env.sh
