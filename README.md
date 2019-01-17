@@ -1,21 +1,23 @@
 # HealtheDatalab
 
-This repository contains 2 types of resources for running healthedatalab on Google Cloud Platform (GCP):  
+This repository contains 2 types of resources for running HealtheDatalab demo on Google Cloud Platform (GCP):  
 
 1. [notebooks](https://github.com/rasalt/hdl-demo/tree/master/notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
 
 2. [scripts](https://github.com/rasalt/hdl-demo/tree/master/scripts "Shell scripts") contains various scripts to provision an environment on GCP to setup a dataproc cluster connected to a persistent HIVE metastore.  
 
-We have provided scripts to add ingress firewall rules required to setup an ssh tunnel between your local machine and Cloud Datalab running on GCP. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.  
+Additionally, we have included scripts to add ingress firewall rules required to open an ssh connection from your local machine to Cloud Datalab running on GCP. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.  
 
 ## Provision a Dataproc cluster on GCP
 
 You will need a [GCP Project](https://cloud.google.com/storage/docs/projects). Either you identify a preexisting project or create a new one using [GCP console](https://cloud.google.com/compute/docs/console) first.  
-You will also need [Google Cloud SDK.](https://cloud.google.com/sdk/install) [Initialize](https://cloud.google.com/sdk/docs/initializing) Google Cloud SDK and select the GCP Project where you want to provision the cluster.
+You will also need [Google Cloud SDK.](https://cloud.google.com/sdk/install)  
+[Initialize](https://cloud.google.com/sdk/docs/initializing) Google Cloud SDK and select the GCP Project where you want to provision the cluster.
 
-Update your env.sh file based on the skeleton provided in [env.sh]( ./scripts/provisioning/env.sh) .  
+Update your env.sh file based on the sample provided in [env.sh]( ./scripts/provisioning/env.sh) .  
 
-Source the environment file you've created. Be aware that the bucketname needs to be unique. If that bucketname already exists then the script will partially fail on subsequent steps.
+Source the environment file you've created. Be aware that the bucket name needs to be unique. If that bucket name already exists then the script will partially fail on subsequent steps. You can safely ignore following errors on subsequent runs of this script:  
+ServiceException: 409 Bucket {bucket-name} already exists.
 
 ```bash
 eg. source ./myenv.sh
@@ -39,17 +41,17 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 
 [firewall_ssh.sh](./scripts/provisioning/firewall_ssh.sh) script adds an ingress firewall rule required for establishing ssh tunnel between your local machine and Cloud Datalab running on GCP.  
 ```
-./firewall_ssh.sh
+./firewall_ssh.sh {path to your env file}
 ```
 
 [sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.
 ```
-./sshtunnel.sh
+./sshtunnel.sh {path to your env file}
 ```
 
 [jupyterconnect.sh](./scripts/provisioning/jupyterconnect.sh) script opens a jupyter notebook inside a Chrome web browser on a MAC.  
 ```
-./jupyterconnect.sh
+./jupyterconnect.sh {path to your env file}
 ```
 This opens up the jupyter notebook in Chrome web browser on localhost:<port> .
 
