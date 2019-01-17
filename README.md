@@ -10,9 +10,10 @@ We have provided scripts to add ingress firewall rules required to setup an ssh 
 
 ## Provision a Dataproc cluster on GCP
 
-You will need a [GCP Project](https://cloud.google.com/storage/docs/projects). Either you identify a preexisting project or create a new one using [GCP console](https://cloud.google.com/compute/docs/console)
+You will need a [GCP Project](https://cloud.google.com/storage/docs/projects). Either you identify a preexisting project or create a new one using [GCP console](https://cloud.google.com/compute/docs/console) first.  
+You will also need [Google Cloud SDK.](https://cloud.google.com/sdk/install) [Initialize](https://cloud.google.com/sdk/docs/initializing) Google Cloud SDK and select the GCP Project where you want to provision the cluster.
 
-First create your env.sh file based on the skeleton provided in [env.sh]( ./scripts/provisioning/env.sh) .  
+Update your env.sh file based on the skeleton provided in [env.sh]( ./scripts/provisioning/env.sh) .  
 
 Source the environment file you've created. Be aware that the bucketname needs to be unique. If that bucketname already exists then the script will partially fail on subsequent steps.
 
