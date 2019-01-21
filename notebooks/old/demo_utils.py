@@ -1,3 +1,6 @@
+from datetime import datetime, date
+from dateutil.parser import parse
+
 def age(birthdate):
     born = datetime.strptime(birthdate, "%Y-%m-%d")
     today = date.today()
