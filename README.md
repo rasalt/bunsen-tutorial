@@ -1,5 +1,10 @@
 # HealtheDatalab
 
+Clone this repository using the following command:
+```bash
+git clone https://github.com/rasalt/hdl-demo.git
+```
+
 This repository contains 2 types of resources for running HealtheDatalab demo on Google Cloud Platform (GCP):  
 
 1. [notebooks](https://github.com/rasalt/hdl-demo/tree/master/notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
@@ -16,8 +21,7 @@ You will also need [Google Cloud SDK.](https://cloud.google.com/sdk/install)
 
 Update your env.sh file based on the sample provided in [env.sh]( ./scripts/provisioning/env.sh) .  
 
-Source the environment file you've created. Be aware that the bucket name needs to be unique. If that bucket name already exists then the script will partially fail on subsequent steps. You can safely ignore following errors on subsequent runs of this script:  
-ServiceException: 409 Bucket {bucket-name} already exists.
+Source the environment file you've created. Be aware that the bucket name needs to be unique. If the bucket already exists then the script will not fail.
 
 ```bash
 eg. source ./myenv.sh
@@ -25,6 +29,8 @@ eg. source ./myenv.sh
 
 Run the [01-prep.sh](./scripts/provisioning/01-prep.sh) script to move the cluster initialization scripts to Google cloud storage bucket
 This script will also create a persistent hive metastore (CloudSQL instance) .
+
+If you get 'AccessDeniedException: 403" please make sure the bucket exist or the bucket name specifed in your env.sh file is unique.
 
 ```
 cd {path}/hdl-demo/scripts/provisioning
