@@ -1,5 +1,7 @@
 from datetime import datetime, date
 from dateutil.parser import parse
+from google.protobuf import text_format
+from proto.stu3 import version_config_pb2
 
 def age(birthdate):
     born = datetime.strptime(birthdate, "%Y-%m-%d")
