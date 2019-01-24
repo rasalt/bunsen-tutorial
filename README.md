@@ -47,17 +47,17 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 
 [firewall_ssh.sh](./scripts/provisioning/firewall_ssh.sh) script adds an ingress firewall rule required for establishing ssh tunnel between your local machine and Cloud Datalab running on GCP.  
 ```
-./firewall_ssh.sh {path to your env file}
+./firewall_ssh.sh {your env file}
 ```
 
 [sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.
 ```
-./sshtunnel.sh {path to your env file}
+./sshtunnel.sh {your env file}
 ```
 
 [jupyterconnect.sh](./scripts/provisioning/jupyterconnect.sh) script opens a jupyter notebook inside a Chrome web browser on a MAC.  
 ```
-./jupyterconnect.sh {path to your env file}
+./jupyterconnect.sh {your env file}
 ```
 This opens up the jupyter notebook in Chrome web browser on localhost:<port> .
 
