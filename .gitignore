@@ -5,3 +5,4 @@ spark-warehouse
 metastore_db
 **/scripts/provisioning/dp_env.sh
 **/notebooks/core
+**/notebooks/old/core
