@@ -3,6 +3,6 @@
 **/derby.log
 spark-warehouse
 metastore_db
-**/scripts/provisioning/dp_env.sh
+**/scripts/provisioning/dp*.sh
 **/notebooks/core
 **/notebooks/old/core
