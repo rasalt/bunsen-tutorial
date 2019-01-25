@@ -42,6 +42,23 @@ Then run the [02-cluster.sh](./scripts/provisioning/02-cluster.sh) file to creat
 ./02-cluster.sh
 ```
 
+Then run the [02-cluster.sh](./scripts/provisioning/02-cluster.sh) file to create a new dataproc cluster
+```
+./02-cluster.sh
+```
+Then run the [03-create-test-data.sh](./scripts/provisioning/03-create-test-data.sh) to create test data (FHIR bundles) using [Synthea<sup>TM</sup>](https://github.com/synthetichealth/synthea). The generated test data will be uploaded to GCS Bucket.
+
+```
+./03-create-test-data.sh
+```
+
+Then run the [04-create-tf-records.sh](./scripts/provisioning/04-create-tf-records.sh) to convert test data (FHIR bundles) from JSON to TFRecord file format. The TFRecord files will be uploaded to GCS Bucket.
+
+```
+./04-create-tf-records.sh
+```
+
+
 ## Access Cloud Datalab over a secure SSH tunnel
 Use the following helper scripts to access Cloud Datalab from your local machine:  
 
