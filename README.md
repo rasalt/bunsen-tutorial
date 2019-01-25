@@ -1,4 +1,4 @@
-# HealtheDatalab
+# Develop and traing Machine learning model using Google's Tensorflow, Cloud Datalab & Cloud Dataproc Cluster
 
 Clone this repository using the following command:
 ```bash
@@ -7,9 +7,9 @@ git clone https://github.com/rasalt/hdl-demo.git
 
 This repository contains 2 types of resources for running HealtheDatalab demo on Google Cloud Platform (GCP):  
 
-1. [notebooks](https://github.com/rasalt/hdl-demo/tree/master/notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
+1. [notebooks](./notebooks "Jupyter Notebooks") contains jupyter notebooks for various phases involved to take patient healthcare data, transform it and eventually use it to train and evaluate a Machine Learning model.  
 
-2. [scripts](https://github.com/rasalt/hdl-demo/tree/master/scripts "Shell scripts") contains various scripts to provision an environment on GCP to setup a dataproc cluster connected to a persistent HIVE metastore.  
+2. [scripts](./scripts "Shell scripts") contains various scripts to provision an environment on GCP to setup a dataproc cluster connected to a persistent HIVE metastore.  
 
 Additionally, we have included scripts to add ingress firewall rules required to open an ssh connection from your local machine to Cloud Datalab running on GCP. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.  
 
