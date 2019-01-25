@@ -1,4 +1,4 @@
-# HealtheDatalab
+# ML on GCP Datalab
 
 Clone this repository using the following command:
 ```bash
