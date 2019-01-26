@@ -6,3 +6,5 @@ metastore_db
 **/scripts/provisioning/dp*.sh
 **/notebooks/core
 **/notebooks/old/core
+.DS_Store
+**/notebooks/.DS_Store
