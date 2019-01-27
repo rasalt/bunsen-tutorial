@@ -40,7 +40,7 @@ cd {path}/hdl-demo/scripts/provisioning
 Then run the [02-cluster.sh](./scripts/provisioning/02-cluster.sh) file to create a new dataproc cluster
 ```
 ./02-cluster.sh
-``` . 
+``` 
 
 ## Access Cloud Datalab over a secure SSH tunnel
 Use the following helper scripts to access Cloud Datalab from your local machine:  
