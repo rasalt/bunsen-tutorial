@@ -59,8 +59,6 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 ```
 ./jupyterconnect.sh {your env file}
 ```
-This opens up the jupyter notebook in Chrome web browser on localhost:<port> .
+This opens up the jupyter notebook in Chrome web browser on localhost:<port> . Upload [demo_notebook.ipynb](./notebooks/demo_notebook.ipynb] and run it. From there, just follow the instructions in that notebook!
 
-Click on the URL displayed at the bottom of the screen and Jupyter will open in your web browser. From there, navigate to work/getting_started.ipynb. From there, just follow the instructions in that notebook!
-
-First-time users can simply read the instructions and execute the cells. As you become familiar with the system, feel free to experiment by editing queries or code and seeing what happens. Any changes you make will be saved to your copy of the notebooks themselves.
+First-time users can simply read the instructions and execute the cells. As you become familiar with the system, feel free to experiment by editing queries or code and seeing what happens. Any changes you make will be saved to your copy of the notebooks themselves. This notebook will use and create datasets (Files) in GCS bucket you specified earlier in myenv.sh
