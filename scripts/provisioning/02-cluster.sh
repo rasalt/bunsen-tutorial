@@ -18,7 +18,9 @@ if [[ "$1" == "hivemeta" ]] ; then
     --properties hive:hive.metastore.warehouse.dir=gs://$hivebucketname/hadoop,spark:spark.sql.warehouse.dir=gs://$hivebucketname/hadoop,core:fs.gs.path.encoding=uri-path \
     --metadata "hive-metastore-instance=$PROJECT:$REGION:$hivedbname" \
     --tags=$tags \
-    --region=$REGION
+    --region=$REGION \
+    --zone=$ZONE
+
 else
   gcloud dataproc clusters create $clustername \
     --master-machine-type=$machinetype \
@@ -27,5 +29,6 @@ else
     --initialization-actions gs://$bucketname/scripts/datalab_fhir.sh,gs://$bucketname/scripts/init-script.sh \
     --initialization-action-timeout="25m" \
     --tags=$tags \
-    --region=$REGION
+    --region=$REGION \
+    --zone=$ZONE
 fi

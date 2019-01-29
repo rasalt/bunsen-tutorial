@@ -55,7 +55,8 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 ./firewall_ssh.sh {your env file}
 ```
 
-[sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel.
+[sshtunnel.sh](./scripts/provisioning/sshtunnel.sh) script opens up an ssh tunnel to the master node. This will enable a Chrome web browser to securely access Cloud datalab over SSH tunnel. Run
+this script in a separate terminal or in the background.
 ```
 ./sshtunnel.sh {your env file}
 ```
@@ -64,7 +65,9 @@ Use the following helper scripts to access Cloud Datalab from your local machine
 ```
 ./jupyterconnect.sh {your env file}
 ```
-This opens up the Cloud Datalab notebook in Chrome web browser. Cloud datalab runs on the master node of the Cloud Dataproc cluster.  
-Upload [demo_notebook.ipynb](./notebooks/demo_notebook.ipynb) and run it. From there, just follow the instructions in that notebook!
+This opens up the Cloud Datalab notebook in Chrome web browser. Cloud datalab runs on the master node of the Cloud Dataproc cluster.
+Upload [bunsen_getting_started.ipynb](./notebooks/bunsen_getting_started.ipynb) and run it. Just follow the instructions in the notebook!
+Upload [bunsen_de_tutorial.ipynb](./notebooks/bunsen_de_tutorial.ipynb) and run it. Just follow  instructions in the notebook!
+Upload [demo_notebook.ipynb](./notebooks/demo_notebook.ipynb) and run it. Just follow instructions in the notebook!
 
 First-time users can simply read the instructions and execute the cells. As you become familiar with the system, feel free to experiment by editing queries or code and seeing what happens. Any changes you make will be saved to your copy of the notebooks themselves. This notebook will use and create datasets (Files) in GCS bucket you specified earlier in myenv.sh
