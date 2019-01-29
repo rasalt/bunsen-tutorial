@@ -40,7 +40,12 @@ cd {path}/hdl-demo/scripts/provisioning
 Then run the [02-cluster.sh](./scripts/provisioning/02-cluster.sh) file to create a new dataproc cluster
 ```
 ./02-cluster.sh
-``` 
+```
+
+Then run the [03-load-training-data.sh](./scripts/provisioning/03-load-training-data.sh) file to upload training dataset (FHIR bundles in TFRecord) to GCS bucket
+```
+./03-load-training-data.sh
+```
 
 ## Access Cloud Datalab over a secure SSH tunnel
 Use the following helper scripts to access Cloud Datalab from your local machine:  
